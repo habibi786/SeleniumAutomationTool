@@ -100,7 +100,9 @@ public class KeywordFunctions {
 				Select dropDown = new Select(runDriver(webElement, webElementValue));
 				logger.info(webElement + " " + webElementValue);
 				logger.info(inputValue);
-				dropDown.selectByVisibleText(inputValue);
+				//dropDown.selectByVisibleText(inputValue);
+				System.out.println("Input Value --> <" + inputValue + ">");
+				dropDown.selectByValue(inputValue);
 				result.setMessage("dropdown selection was done successfully");
 				result.setResult(true);
 			} catch (Exception e) {
